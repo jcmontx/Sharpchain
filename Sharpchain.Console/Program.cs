@@ -11,6 +11,7 @@ namespace Sharpchain.Test
             do
             {
                 Console.WriteLine($"Index of last block: {bc.GetLastBlock().Index}");
+                Console.WriteLine($"Mining attempts: {bc.GetLastBlock().Nonce}");
                 Console.WriteLine($"-----Verifying validiy------");
                 Console.WriteLine($"Blockchain is valid: {bc.IsValid()}");
                 Console.WriteLine("------Input next block data------");

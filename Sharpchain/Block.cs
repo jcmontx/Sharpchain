@@ -8,6 +8,8 @@ namespace Sharpchain
 {
     public class Block
     {
+        private const string difficulty = "000";
+
         public Block(Block prev, dynamic data = null)
         {
             Data = data;
@@ -24,7 +26,7 @@ namespace Sharpchain
             {
                 Nonce++;
                 Hash = GenerateHash();
-            } while (!Hash.StartsWith("00"));
+            } while (!Hash.StartsWith(difficulty));
         }
 
         private Block() { }
